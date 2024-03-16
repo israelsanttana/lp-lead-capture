@@ -14,7 +14,7 @@ export function Nav() {
                         </h2>
                     </div>
                     <div className="self-end lg:self-center">
-                        <Button className="text-sm">FALAR COM UM CONSULTOR</Button>
+                        <Button className="text-[12px] lg:text-sm">FALAR COM UM CONSULTOR</Button>
                     </div>
                 </div>
             </div>
