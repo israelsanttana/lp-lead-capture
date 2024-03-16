@@ -18,6 +18,10 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        'hero-bg': "url('/src/assets/hero.svg')"
+
+      },
       colors: {
         customerPrimary: "#FAD035",
         customerSecondary: "rgb(56 74 163 / 91%)",

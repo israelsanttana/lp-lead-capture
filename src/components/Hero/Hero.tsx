@@ -4,7 +4,7 @@ import img from '../../assets/imgHero.png'
 export function Hero() {
     return (
         <div className='w-full backHero'>
-            <div className="container mx-auto mt-16 mb-10 lg:mt-10">
+            <div className="container mx-auto mt-16 mb-10 lg:bg-hero-bg bg-no-repeat bg-contain bg-center lg:mt-10">
                 <div className="w-full flex flex-col lg:flex-row">
                     <div className="flex-1 self-center ">
                         <h1 className="text-6xl font-bold text-slate-900 lg:text-8xl">DISCIPLINAS ISOLADAS</h1>

@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 
 export function Nav() {
     return (
-        <div className="w-full pt-4">
+        <div className="w-full pt-4 bg-hero-bg bg-no-repeat bg-cover bg-center md:bg-bottom lg:bg-none">
             <div className="container mx-auto">
                 <div className="flex w-full justify-between items-center h-20 lg:h-24">
                     <div className="self-end lg:self-center">

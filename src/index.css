@@ -60,7 +60,14 @@ html {
   
 
 .backHero {
-  background-image: url("./assets/hero.svg");
+  background-image: url("");
   background-repeat: no-repeat;
    
+}
+
+
+@media (max-width 800px) {
+  .backHero {
+    background-position: top;
+  }
 }
