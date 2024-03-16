@@ -27,8 +27,8 @@ export function Form() {
     return (
         <div className="w-full pt-10 pb-10 bg-customerSecondary">
             <div className="container mx-auto mt-10 mb-10">
-                <div className="flex gap-14">
-                    <Card className="w-[350px] flex-1">
+                <div className="flex flex-col gap-10 lg:flex-row">
+                    <Card className="w-full flex-1">
                         <CardHeader>
                             <CardTitle>Faça sua inscrição</CardTitle>
                             <CardDescription>Preencha os dados abaixo.</CardDescription>
@@ -83,10 +83,10 @@ export function Form() {
                         </CardContent>
                     </Card>
                     <div className="flex-1 self-center">
-                        <h2 className="text-5xl font-bold text-white">
+                        <h2 className="text-5xl text-center font-bold text-white">
                             CONCLUA SUA GRADUAÇÃO MAIS RÁPIDO!
                         </h2>
-                        <p className="pt-4 text-lg text-white">
+                        <p className="pt-4 text-lg text-center text-white">
                             As disciplinas optativas, eletivas e obrigatórias fazem parte das ações propostas para a ampla formação dos estudantes. Cada uma cumpre um objetivo dentro que se espera de uma formação de nível superior.
                         </p>
                     </div>

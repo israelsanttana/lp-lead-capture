@@ -13,7 +13,7 @@ export function Information() {
                         Preste bastante atenção:
                     </p>
                 </div>
-                <div className="grid grid-cols-3 gap-6 pt-10">
+                <div className="grid grid-cols-1 gap-6 pt-10 md:grid-cols-3">
                     <div className="bg-blue-500 rounded-lg p-10">
                         <h2 className="text-2xl mb-4 text-white">Alunos do Grupo Prominas</h2>
                         <p className="text-white">

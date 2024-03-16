@@ -5,9 +5,9 @@ export function Hero() {
     return (
         <div className='w-full backHero'>
             <div className="container mx-auto mt-10 mb-10">
-                <div className="flex w-full">
-                    <div className="flex-1 self-center">
-                        <h1 className="text-8xl font-bold text-slate-900">DISCIPLINAS ISOLADAS</h1>
+                <div className="w-full flex flex-col lg:flex-row">
+                    <div className="flex-1 self-center ">
+                        <h1 className="text-6xl font-bold text-slate-900">DISCIPLINAS ISOLADAS</h1>
                         <h3 className='text-2xl font-medium'>Conclua sua disciplina com 32 dias!</h3>
                         <div className='pt-6 flex gap-2 flex-col text-lg'>
                             <div className='flex gap-2'>
@@ -28,7 +28,7 @@ export function Hero() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 sm:w-full">
                         <img src={img} alt="" />
                     </div>
                 </div>
