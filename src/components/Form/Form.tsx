@@ -83,7 +83,7 @@ export function Form() {
                         </CardContent>
                     </Card>
                     <div className="flex-1 self-center">
-                        <h2 className="text-5xl text-center font-bold text-white">
+                        <h2 className="text-4xl text-center font-bold text-white">
                             CONCLUA SUA GRADUAÇÃO MAIS RÁPIDO!
                         </h2>
                         <p className="pt-4 text-lg text-center text-white">
