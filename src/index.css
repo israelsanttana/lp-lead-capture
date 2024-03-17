@@ -55,19 +55,3 @@ html {
     --ring: 35.5 91.7% 32.9%;
   }
 }
-
-
-  
-
-.backHero {
-  background-image: url("");
-  background-repeat: no-repeat;
-   
-}
-
-
-@media (max-width 800px) {
-  .backHero {
-    background-position: top;
-  }
-}
