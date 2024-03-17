@@ -25,8 +25,8 @@ export function Form() {
     };
 
     return (
-        <div className="w-full pt-10 pb-10 bg-customerSecondary">
-            <div className="container mx-auto mt-10 mb-10">
+        <div className="w-full pt-4 pb-1 bg-customerSecondary lg:pt-8 lg:pb-8">
+            <div className="container mx-auto mt-6 mb-6">
                 <div className="flex flex-col gap-10 lg:flex-row">
                     <Card className="w-full flex-1">
                         <CardHeader>

@@ -2,7 +2,7 @@ import { FacebookLogo, InstagramLogo, QrCode, YoutubeLogo } from "@phosphor-icon
 
 export function Footer() {
     return (
-        <div className="w-full  bg-gray-950 mt-20 text-white">
+        <div className="w-full  bg-gray-950 text-white">
             <div className="container mx-auto">
                 <div className="h-72 w-full grid grid-cols-1 justify-items-center pt-10 pb-10 text-center lg:grid-cols-3">
                     <div className="flex self-center">

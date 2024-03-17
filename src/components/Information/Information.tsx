@@ -3,8 +3,8 @@
 export function Information() {
     return (
         <div className="w-full">
-            <div className="container mx-auto mt-10 mb-10">
-                <div className="mb-10 mt-10 w-full text-center text-slate-900 ">
+            <div className="container mx-auto pb-10 lg:mb-10 lg:mt-8">
+                <div className=" w-full text-center text-slate-900 ">
                     <h2 className="text-5xl font-bold ">Quem pode fazer?</h2>
                     <p className="pt-4 text-lg">
                         Nossas Disciplinas Isoladas são aceitas em várias instituições de ensino

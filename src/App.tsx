@@ -9,8 +9,8 @@ export function App() {
     <>
       <Nav />
       <Hero />
-      <Form />
       <Information />
+      <Form />
       <Footer />
     </>
   )
