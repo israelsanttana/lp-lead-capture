@@ -87,7 +87,7 @@ export function Form() {
                             CONCLUA SUA GRADUAÇÃO MAIS RÁPIDO!
                         </h2>
                         <p className="pt-4 text-lg text-center text-white">
-                            As disciplinas optativas, eletivas e obrigatórias fazem parte das ações propostas para a ampla formação dos estudantes. Cada uma cumpre um objetivo dentro que se espera de uma formação de nível superior.
+                            As  Disciplinas Isoladas são destinadas à universitários que possuem dependências em suas instituições de ensino e <span className="font-bold">NÃO</span> querem aguardar um semestre inteiro ou mais para cumpri-las, Através das Disciplinas Isoladas em apenas 7 dias, um aluno pode cumprir sua dependência de forma on-line em outra instituição de ensino sem transferir o seu curso ou alterar a sua modalidade.
                         </p>
                     </div>
                 </div>
