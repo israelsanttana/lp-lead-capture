@@ -23,8 +23,8 @@ module.exports = {
 
       },
       colors: {
-        customerPrimary: "#FAD035",
-        customerSecondary: "rgb(56 74 163 / 91%)",
+        customerPrimary: "#efbb4a",
+        customerSecondary: "#444341",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
