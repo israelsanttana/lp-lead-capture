@@ -19,11 +19,11 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-bg': "url('/src/assets/hero.svg')"
+        'hero-bg': "url('/src/assets/hero-graduacao-3.png')"
 
       },
       colors: {
-        customerPrimary: "#efbb4a",
+        customerPrimary: "#FDD105",
         customerSecondary: "#444341",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

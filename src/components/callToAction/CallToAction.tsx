@@ -1,9 +1,9 @@
-import { CaretCircleRight } from "@phosphor-icons/react";
+
 
 export function CallToAction() {
     return (
-        <div className="container mx-auto pb-8 lg:pt-8 lg:pb-8">
-            <div className="flex flex-col self-center gap-6 lg:flex-row">
+        <div className=" h-screen bg-customerSecondary pb-8 lg:pt-8 lg:pb-8">
+            {/* <div className="flex flex-col self-center gap-6 lg:flex-row">
                 <div className="flex-1">
                     <div className='flex gap-2 flex-col text-lg'>
                         <div className='flex gap-2'>
@@ -36,7 +36,7 @@ export function CallToAction() {
                         art. 50 da Lei de Diretrizes e Bases da Educação <span className='font-light text-[#FAD035]'>(Lei n° 9.394/1996)</span> que autoriza as Instituições de Ensino o oferecimento de disciplinas de cursos superiores, mediante a existência de vagas, a alunos não regulares, que comprovem capacidade de cursá-las.
                     </p>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
