@@ -19,7 +19,9 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'hero-bg': "url('/src/assets/hero-graduacao-3.png')"
+        'hero-bg': "url('/src/assets/hero-graduacao-3.png')",
+        'callToAction-bg': "url('/src/assets/hero-graduacao-dark.png')",
+        'carousel-bg': "url('/src/assets/carousel-bg.png')",
 
       },
       colors: {
