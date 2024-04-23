@@ -7,7 +7,7 @@ import logoMac from "../../assets/soloMAC.png";
 
 export function Hero() {
     return (
-        <div className='bg-hero-bg bg-cover w-full'>
+        <div className='bg-hero-bg zoom-effect bg-cover w-full'>
             <div className="container mx-auto h-[100vh] flex flex-col justify-between items-center gap-20">
                 <div className="w-full pl-3 pr-3 bg-customerSecondary/70 mb-6 pt-3 pb-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
                     <div className=" text-slate-100 grid grid-cols-3">

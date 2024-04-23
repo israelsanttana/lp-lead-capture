@@ -1,10 +1,15 @@
-import { FacebookLogo, InstagramLogo, QrCode, YoutubeLogo } from "@phosphor-icons/react";
+import { FacebookLogo, InstagramLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { VerificationMecFaculdadeUnica, VerificationMecFatesp } from "../VerificationPage/VerificationPage";
 
 export function Footer() {
     return (
         <div className="w-full  bg-customerSecondary text-white">
             <div className="container mx-auto">
                 <div className="h-72 w-full grid grid-cols-1 justify-items-center pt-10 pb-10 text-center lg:grid-cols-3">
+                    <div className="flex self-center gap-3">
+                        <VerificationMecFaculdadeUnica />
+                        <VerificationMecFatesp />
+                    </div>
                     <div className="flex self-center">
                         <div>
                             <p>Siga nossa faculdade:</p>
@@ -20,13 +25,7 @@ export function Footer() {
                         <p>Todos os direitos reservados © 2024</p>
                         <p>contato@instituicaomec.com.br</p>
                     </div>
-                    <div className="flex self-center">
-                        <p className="pt-4">
-                            Consulte aqui o cadastro da <br />
-                            Instituição no Sistema e-MEC
-                        </p>
-                        <QrCode size={70} />
-                    </div>
+
                 </div>
             </div>
         </div>

@@ -11,6 +11,20 @@ html {
   text-shadow: 0.1em 0.1em 2.2em white;
 }
 
+.zoom-effect {
+  animation: zoom 10s ease-in-out alternate;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+
 
 
 @layer base {
