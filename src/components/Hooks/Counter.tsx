@@ -15,7 +15,7 @@ const Counter: React.FC = () => {
     });
 
     return (
-        <div ref={ref} className='text-black text-[7rem] font-bold drop-shadow-xl'>
+        <div ref={ref} className='text-black text-[5rem] md:text-[7rem] font-bold drop-shadow-xl'>
             +<animated.span>{number.interpolate(value => Math.floor(value))}</animated.span>
         </div>
     );

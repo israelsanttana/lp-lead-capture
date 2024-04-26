@@ -52,7 +52,7 @@ export function CarouselLayout() {
             <div className="container mx-auto flex flex-col gap-6 items-center justify-center  min-h-[500px]">
 
                 <div className=" pb-4 w-full text-center">
-                    <h2 className="text-4xl text-white font-bold drop-shadow-lg">
+                    <h2 className="text-2xl text-white font-semibold drop-shadow-lg pt-8 md:pt-0 md:text-4xl">
                         O QUE NOSSOS ALUNOS TEM A DIZER
                     </h2>
                 </div>
