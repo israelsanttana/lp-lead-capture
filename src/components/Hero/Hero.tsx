@@ -4,7 +4,10 @@ import logoConectaEdu from "../../assets/logoConectaEdu.png";
 import logoFaculdadeUnica from "../../assets/logoFaculdadeUnica.svg";
 import logoFatesp from "../../assets/logoFatesp.png";
 import logoMac from "../../assets/seloMec.png";
+import { ModalForm } from "../modal/ModalForm";
+
 export function Hero() {
+
     return (
         <div className="bg-hero-bg bg-cover w-full">
             <div className="container mx-auto  flex flex-col justify-between items-center gap-20 md:h-[100vh] lg:h-[100vh]">
@@ -76,7 +79,7 @@ export function Hero() {
                         </span>
                     </h2>
                     <button className="bg-customerPrimary text-customerSecondary px-10 py-2 rounded-md mt-8 md:mt-4 font-bold drop-shadow-xl">
-                        FALE CONOSCO
+                        <ModalForm title="FALE CONOSCO" />
                     </button>
                 </motion.div>
 

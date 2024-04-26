@@ -3,6 +3,7 @@ import imgAmparo from "../../assets/imgAmparo.png"
 import imgAlunosOut from "../../assets/outrasInst.png"
 import imgAlunosOuv from "../../assets/ouvintes.png"
 import { VideoPlayer } from "../Hooks/VideoPlayer"
+import { ModalForm } from "../modal/ModalForm"
 import { Button } from "../ui/button"
 export function Information() {
     return (
@@ -21,7 +22,7 @@ export function Information() {
                         <p className="text-xs mt-2 md:text-lg md:mt-4">
                             Todo aluno ativo (regular) de qualquer curso de graduação ou pós-graduação <br /> com matérias pendentes em suas universidades podem <br /> cumprir sua dependência em até 7 dias!
                         </p>
-                        <Button className='bg-customerPrimary text-customerSecondary px-10 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>TENHO INTERESSE</Button>
+                        <Button className='bg-customerPrimary text-customerSecondary px-10 py-4 rounded-md mt-4 font-bold drop-shadow-xl'><ModalForm title="TENHO INTERESSE" /></Button>
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0, x: -100 }}

@@ -1,6 +1,7 @@
 import { SealQuestion } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
 import Counter from "../Hooks/Counter";
+import { ModalForm } from "../modal/ModalForm";
 import { Button } from "../ui/button";
 
 
@@ -72,7 +73,7 @@ export function CallToAction() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.10, duration: 1.0 }}
                     >
-                        <Button className='bg-customerPrimary text-customerSecondary px-12 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>SAIBA MAIS</Button>
+                        <Button className='bg-customerPrimary text-customerSecondary px-12 py-4 rounded-md mt-4 font-bold drop-shadow-xl'><ModalForm title="SAIBA MAIS" /></Button>
                     </motion.div>
                 </div>
             </div>
