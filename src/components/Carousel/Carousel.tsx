@@ -44,7 +44,7 @@ const testemunhos = [
 export function CarouselLayout() {
     return (
         <div className="w-full bg-carousel-bg bg-cover pb-8 bg-left md:bg-right md:pb-0">
-            <div className="container mx-auto flex flex-col gap-2 items-center justify-center  md:gap-6 md:min-h-[500px]">
+            <div className="container mx-auto flex flex-col gap-2 items-center justify-center px-[3rem] md:gap-6 md:min-h-[500px] md:px-0">
 
                 <div className=" pb-4 w-full text-center">
                     <motion.h2
