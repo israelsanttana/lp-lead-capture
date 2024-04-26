@@ -1,10 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 html {
   font-family: "Montserrat", sans-serif;
-  
 }
 
 .shadow-text {
@@ -24,8 +23,14 @@ html {
   }
 }
 
-
-
+@keyframes draw {
+  0% {
+    stroke-dashoffset: 1500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
 
 @layer base {
   :root {
