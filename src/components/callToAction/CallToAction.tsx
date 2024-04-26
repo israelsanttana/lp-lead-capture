@@ -22,7 +22,7 @@ export function CallToAction() {
                         <div className="flex items-center justify-center bg-customerPrimary -mt-12 rounded-full w-20 h-20 drop-shadow-xl ml-6">
                             <SealQuestion size={44} color="#444341" />
                         </div>
-                        <div className="flex flex-col gap-2 font-semibold text-customerSecondary p-4">
+                        <div className="flex flex-col gap-2 font-semibold text-customerSecondary p-4 text-[18px]">
                             <p>Está precisando eliminar dependência na Faculdade?</p>
                             <p>Precisa adiantar alguma disciplina do seu curso?</p>
                             <p>Quer fazer uma adaptação curricular em seu curso?</p>
@@ -38,7 +38,7 @@ export function CallToAction() {
                         </h2>
                     </div>
                     <div>
-                        <Button className='bg-customerPrimary text-customerSecondary px-6 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>INSCREVA-SE</Button>
+                        <Button className='bg-customerPrimary text-customerSecondary px-12 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>SAIBA MAIS</Button>
                     </div>
                 </div>
             </div>

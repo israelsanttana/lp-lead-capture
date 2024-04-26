@@ -1,5 +1,7 @@
+import imgAmparo from "../../assets/imgAmparo.png"
 import imgAlunosOut from "../../assets/outrasInst.png"
 import imgAlunosOuv from "../../assets/ouvintes.png"
+import { VideoPlayer } from "../Hooks/VideoPlayer"
 import { Button } from "../ui/button"
 export function Information() {
     return (
@@ -9,12 +11,16 @@ export function Information() {
                     <div className="w-full text-slate-900">
                         <h2 className="text-4xl font-semibold">QUEM PODE FAZER?</h2>
                         <p className="text-md mt-4">
-                            As Disciplinas Isoladas são destinadas para alunos regulares de qualquer curso de graduação ou pós-graduação <br /> que possuam matérias pendentes (dependências) em suas instituições de ensino e desejam sana-las <br /> de forma rápida e legal.
+                            Todo aluno ativo (regular) de qualquer curso de graduação ou pós-graduação <br /> com matérias pendentes em suas universidades podem <br /> cumprir sua dependência em até 7 dias!
                         </p>
-
+                        <Button className='bg-customerPrimary text-customerSecondary px-10 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>TENHO INTERESSE</Button>
                     </div>
-                    <div>
-                        <Button className='bg-customerPrimary text-customerSecondary px-6 py-4 rounded-md mt-4 font-bold drop-shadow-xl'>INSCREVA-SE</Button>
+                    <div className="flex justify-center items-center">
+                        <div className="border border-customerPrimary drop-shadow-xl p-2 hover:-translate-y-1 hover:scale-105 duration-300">
+                            <div className="-mb-2">
+                                <VideoPlayer />
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -48,7 +54,7 @@ export function Information() {
 
                     <div className="grid grid-cols-[300px_2fr] items-center">
                         <div className="drop-shadow-xl">
-                            <img className="rounded-xl" src={imgAlunosOuv} width={250} />
+                            <img className="rounded-xl" src={imgAmparo} width={250} />
                         </div>
 
                         <div>

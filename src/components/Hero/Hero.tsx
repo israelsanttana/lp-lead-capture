@@ -2,30 +2,26 @@
 import { Certificate, CheckCircle, GraduationCap, Star, Wallet } from "@phosphor-icons/react";
 import logoConectaEdu from "../../assets/logoConectaEdu.png";
 import logoFaculdadeUnica from "../../assets/logoFaculdadeUnica.svg";
-import logoFatesp from "../../assets/logoFatesp.webp";
-import logoMac from "../../assets/soloMAC.png";
+import logoFatesp from "../../assets/logoFatesp.png";
+import logoMac from "../../assets/seloMec.png";
+
 
 export function Hero() {
     return (
-        <div className='bg-hero-bg zoom-effect bg-cover w-full'>
+        <div className='bg-hero-bg bg-cover w-full'>
             <div className="container mx-auto h-[100vh] flex flex-col justify-between items-center gap-20">
-                <div className="w-full pl-3 pr-3 bg-customerSecondary/70 mb-6 pt-3 pb-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
+                <div className="w-full bg-customerSecondary/70 mb-6 py-2 px-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
                     <div className=" text-slate-100 grid grid-cols-3">
                         <div className="flex items-center justify-start">
                             <img src={logoConectaEdu} width={190} />
                         </div>
                         <div className="flex items-center justify-center">
-                            <h1 className="text-4xl font-bold">
-                                DISCIPLINAS <span className="font-thin text-customerPrimary">ISOLADAS</span>
+                            <h1 className="text-3xl font-bold">
+                                DISCIPLINAS <span className=" text-customerPrimary">ISOLADAS</span>
                             </h1>
                         </div>
                         <div className="flex items-center justify-end text-center gap-2">
-                            <p className="text-[14px] font-extralight leading-4">
-                                Reconhecido <br />
-                                pelo MEC
-
-                            </p>
-                            <img src={logoMac} width={70} />
+                            <img src={logoMac} width={100} />
                         </div>
                     </div>
                 </div>
@@ -38,9 +34,11 @@ export function Hero() {
                     </h1>
                     <h2 className="text-2xl text-white  mt-4">
                         Acabe com suas dependências em até 7 dias
+
+
                     </h2>
-                    <button className='bg-customerPrimary text-customerSecondary px-4 py-4 rounded-xl mt-4 font-bold'>
-                        MATRICULE-SE AGORA
+                    <button className='bg-customerPrimary text-customerSecondary px-10 py-2 rounded-md mt-4 font-bold drop-shadow-xl'>
+                        FALE CONOSCO
                     </button>
                 </div>
                 <div className="grid grid-cols-3 gap-2 text-white mb-4">
@@ -64,7 +62,9 @@ export function Hero() {
                             </div>
                         </div>
                         <div className="flex flex-col gap-3 items-center justify-center">
-                            <img src={logoFatesp} width={170} />
+                            <div className="border-b pb-2">
+                                <img src={logoFatesp} width={170} />
+                            </div>
                             <img src={logoFaculdadeUnica} width={160} />
                         </div>
                     </div>
