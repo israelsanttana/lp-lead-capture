@@ -5,6 +5,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel.tsx";
+import { motion } from "framer-motion";
 import imgNota from "../../assets/nota-client.png";
 import { Card, CardContent } from "../ui/card";
 
@@ -46,15 +47,23 @@ export function CarouselLayout() {
             <div className="container mx-auto flex flex-col gap-2 items-center justify-center  md:gap-6 md:min-h-[500px]">
 
                 <div className=" pb-4 w-full text-center">
-                    <h2 className="text-2xl text-white font-semibold drop-shadow-lg pt-8 md:pt-0 md:text-4xl">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 1 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.3, duration: 0.7 }}
+                        className="text-2xl text-white font-semibold drop-shadow-lg pt-8 md:pt-0 md:text-4xl">
                         O QUE NOSSOS ALUNOS TEM A DIZER
-                    </h2>
+                    </motion.h2>
                 </div>
                 <Carousel opts={{ align: "start" }} className="w-full max-w-6xl ">
                     <CarouselContent>
                         {testemunhos.map((testemunho) => (
                             <CarouselItem key={testemunho.id} className=" md:basis-1/2 lg:basis-1/3">
-                                <div className="p-1">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 1 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.3, duration: 0.7 }}
+                                    className="p-1">
                                     <Card className="h-[360px] md:h-full">
                                         <CardContent className="flex flex-col items-center justify-between p-6 md:min-h-[300px] drop-shadow-xl ">
                                             <div className="grid grid-cols-[100px_2fr]">
@@ -74,7 +83,7 @@ export function CarouselLayout() {
                                             </div>
                                         </CardContent>
                                     </Card>
-                                </div>
+                                </motion.div>
                             </CarouselItem>
                         ))}
                     </CarouselContent>

@@ -1,20 +1,26 @@
 import { Certificate, CheckCircle, GraduationCap, Star, Wallet } from "@phosphor-icons/react";
+import { motion } from "framer-motion";
 import logoConectaEdu from "../../assets/logoConectaEdu.png";
 import logoFaculdadeUnica from "../../assets/logoFaculdadeUnica.svg";
 import logoFatesp from "../../assets/logoFatesp.png";
 import logoMac from "../../assets/seloMec.png";
-
 export function Hero() {
     return (
         <div className="bg-hero-bg bg-cover w-full">
             <div className="container mx-auto  flex flex-col justify-between items-center gap-20 md:h-[100vh] lg:h-[100vh]">
-                <div className="w-full bg-customerSecondary/70 mb-6 py-2 px-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
+
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1.5, delay: 0.4 }}
+                    className="w-full bg-customerSecondary/70 mb-6 py-2 px-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
+
                     <div className=" text-slate-100 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
                         <div className="flex justify-center items-center md:justify-start lg:justify-start">
                             <img src={logoConectaEdu} width={190} />
                         </div>
-                        <div className="flex items-center justify-center">
-                            <h1 className="text-2xl md:text-3xl lg:3xl font-bold">
+                        <div className="flex items-center justify-center md:text-center">
+                            <h1 className="text-2xl md:text-2xl lg:3xl font-bold">
                                 DISCIPLINAS <span className=" text-customerPrimary">ISOLADAS</span>
                             </h1>
                         </div>
@@ -22,9 +28,14 @@ export function Hero() {
                             <img src={logoMac} width={100} />
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="text-center">
+                <motion.div
+                    initial={{ opacity: -100, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1.5, delay: 0.6 }}
+                    className="text-center">
+
                     <h1 className="text-2xl md:text-5xl text-white font-bold leading-14 shadow-text">
                         SUA TURMA NÃO IRÁ SE
                         <br />
@@ -67,11 +78,15 @@ export function Hero() {
                     <button className="bg-customerPrimary text-customerSecondary px-10 py-2 rounded-md mt-8 md:mt-4 font-bold drop-shadow-xl">
                         FALE CONOSCO
                     </button>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 gap-6 text-white mb-4 md:gap-2 md:grid-cols-3 lg:grid-cols-3">
 
-                    <div className="bg-customerSecondary/70 rounded-xl p-4 grid grid-cols-[1fr_2fr] items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.8, delay: 0.12 }}
+                        className="bg-customerSecondary/70 rounded-xl p-4 grid grid-cols-[1fr_2fr] items-center justify-center">
                         <div className="flex flex-col items-center text-center gap-1 md:gap-6">
                             <div className="flex items-center justify-center bg-customerPrimary -mt-10 rounded-full
                              w-16 h-16 md:w-20 md:h-20 drop-shadow-xl">
@@ -97,9 +112,13 @@ export function Hero() {
                             </div>
                             <img src={logoFaculdadeUnica} width={160} />
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="bg-customerSecondary/70 p-4 rounded-xl grid grid-cols-[1fr_2fr] items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 2.0, delay: 0.8 }}
+                        className="bg-customerSecondary/70 p-4 rounded-xl grid grid-cols-[1fr_2fr] items-center justify-center">
                         <div className="flex flex-col items-center gap-1 md:gap-6">
                             <div
                                 className="flex items-center justify-center bg-customerPrimary -mt-10 rounded-full w-16 h-16 md:w-20 md:h-20
@@ -122,9 +141,13 @@ export function Hero() {
                                 <br /> em mais de 300 faculdades
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="bg-customerSecondary/70 rounded-xl flex justify-center min-h-[140px]">
+                    <motion.div
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 2.4, delay: 1.4 }}
+                        className="bg-customerSecondary/70 rounded-xl flex justify-center min-h-[140px]">
                         <div className="p-4 grid grid-cols-[1fr_2fr] items-center justify-center">
                             <div className="text-center flex flex-col items-center gap-1 md:gap-6">
                                 <div className="flex items-center justify-center bg-customerPrimary -mt-10 rounded-full w-16 h-16 md:w-20 md:h-20 drop-shadow-xl">
@@ -140,7 +163,7 @@ export function Hero() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
