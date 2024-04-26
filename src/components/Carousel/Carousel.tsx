@@ -16,6 +16,27 @@ const testemunhos = [
         texto: "Gostaria de compartilhar a minha gratidão pelo ótimo suporte e consultoria que recebi da empresa. Ao precisar realizar disciplinas isoladas para a conclusão da minha graduação, fui muito feliz pelo atendimento impecável que me foi prestado. Todas as disciplinas foram realizadas de acordo com as diretrizes da minha instituição, possibilitando o aproveitamento necessário para a conclusão do meu curso. Agradeço profundamente pela consultoria precisa, que me orientou exatamente no que eu buscava. Nem sempre o bom é notado, mas quando se destaca, merece ser compartilhado. Obrigada.",
         curso: "Nome do Curso 1",
     },
+    {
+        id: 1,
+        nome: "Flávia Durães",
+        imagem: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        texto: "Gostaria de compartilhar a minha gratidão pelo ótimo suporte e consultoria que recebi da empresa. Ao precisar realizar disciplinas isoladas para a conclusão da minha graduação, fui muito feliz pelo atendimento impecável que me foi prestado. Todas as disciplinas foram realizadas de acordo com as diretrizes da minha instituição, possibilitando o aproveitamento necessário para a conclusão do meu curso. Agradeço profundamente pela consultoria precisa, que me orientou exatamente no que eu buscava. Nem sempre o bom é notado, mas quando se destaca, merece ser compartilhado. Obrigada.",
+        curso: "Nome do Curso 1",
+    },
+    {
+        id: 1,
+        nome: "Flávia Durães",
+        imagem: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        texto: "Gostaria de compartilhar a minha gratidão pelo ótimo suporte e consultoria que recebi da empresa. Ao precisar realizar disciplinas isoladas para a conclusão da minha graduação, fui muito feliz pelo atendimento impecável que me foi prestado. Todas as disciplinas foram realizadas de acordo com as diretrizes da minha instituição, possibilitando o aproveitamento necessário para a conclusão do meu curso. Agradeço profundamente pela consultoria precisa, que me orientou exatamente no que eu buscava. Nem sempre o bom é notado, mas quando se destaca, merece ser compartilhado. Obrigada.",
+        curso: "Nome do Curso 1",
+    },
+    {
+        id: 1,
+        nome: "Flávia Durães",
+        imagem: "https://i.pravatar.cc/150?u=a042581f4e29026704d",
+        texto: "Gostaria de compartilhar a minha gratidão pelo ótimo suporte e consultoria que recebi da empresa. Ao precisar realizar disciplinas isoladas para a conclusão da minha graduação, fui muito feliz pelo atendimento impecável que me foi prestado. Todas as disciplinas foram realizadas de acordo com as diretrizes da minha instituição, possibilitando o aproveitamento necessário para a conclusão do meu curso. Agradeço profundamente pela consultoria precisa, que me orientou exatamente no que eu buscava. Nem sempre o bom é notado, mas quando se destaca, merece ser compartilhado. Obrigada.",
+        curso: "Nome do Curso 1",
+    },
 
 ];
 
@@ -57,8 +78,8 @@ export function CarouselLayout() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious className="hidden md:block" />
-                    <CarouselNext className="hidden md:block" />
+                    <CarouselPrevious />
+                    <CarouselNext />
                 </Carousel>
             </div>
         </div>
