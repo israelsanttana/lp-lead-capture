@@ -10,8 +10,8 @@ export function AccordionLayout() {
 
     return (
         <div className="w-full min-h-[500px] bg-black flex flex-col justify-center">
-            <div className="container mx-auto flex mb-2">
-                <h2 className="text-3xl font-semibold text-white">
+            <div className="container mx-auto flex items-center justify-center mb-2 md:justify-start">
+                <h2 className="text-xl font-semibold text-customerPrimary md:text-3xl">
                     PERGUNTAS FREQUENTES
                 </h2>
             </div>

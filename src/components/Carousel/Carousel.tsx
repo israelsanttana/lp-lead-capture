@@ -48,8 +48,8 @@ const testemunhos = [
 
 export function CarouselLayout() {
     return (
-        <div className="w-full bg-carousel-bg bg-cover bg-right">
-            <div className="container mx-auto flex flex-col gap-6 items-center justify-center  min-h-[500px]">
+        <div className="w-full bg-carousel-bg bg-cover pb-8 bg-left md:bg-right md:pb-0">
+            <div className="container mx-auto flex flex-col gap-2 items-center justify-center  md:gap-6 md:min-h-[500px]">
 
                 <div className=" pb-4 w-full text-center">
                     <h2 className="text-2xl text-white font-semibold drop-shadow-lg pt-8 md:pt-0 md:text-4xl">
@@ -62,9 +62,9 @@ export function CarouselLayout() {
                             <CarouselItem key={testemunho.id} className="md:basis-1/2 lg:basis-1/3">
                                 <div className="p-1">
                                     <Card>
-                                        <CardContent className="flex flex-col items-center justify-between p-6 min-h-[300px] drop-shadow-xl ">
+                                        <CardContent className="flex flex-col items-center justify-between p-6 md:min-h-[300px] drop-shadow-xl ">
                                             <div className="grid grid-cols-[100px_2fr]">
-                                                <div className=" flex items-center">
+                                                <div className="flex items-center">
                                                     <img src={testemunho.imagem} alt={testemunho.nome} className="w-16 h-16 rounded-full mb-4" />
                                                 </div>
                                                 <div>
@@ -72,7 +72,7 @@ export function CarouselLayout() {
                                                     <p className="text-gray-500">{testemunho.curso}</p>
                                                 </div>
                                             </div>
-                                            <div className="overflow-auto overflow-x-hidden lg:max-h-[110px] md:max-h-[100px] mb-2 p-1">
+                                            <div className="overflow-auto overflow-x-hidden max-h-[100px] lg:max-h-[110px] md:max-h-[100px] mb-2 p-1">
                                                 <p className="text-gray-600 text-center">{testemunho.texto}</p>
                                             </div>
                                             <div>
@@ -87,9 +87,7 @@ export function CarouselLayout() {
                     <CarouselPrevious />
                     <CarouselNext />
                 </Carousel>
-
             </div>
-
         </div>
     );
 }

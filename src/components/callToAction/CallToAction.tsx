@@ -19,7 +19,7 @@ export function CallToAction() {
 
                 <div className="flex items-center ">
                     <div className="bg-white -mt-12 rounded-xl drop-shadow-xl p-4 md:mb-20">
-                        <div className="flex items-center justify-center bg-customerPrimary -mt-12 rounded-full w-20 h-20 drop-shadow-xl ml-6">
+                        <div className="flex items-center justify-center bg-customerPrimary -mt-12 rounded-full w-16 h-16 md:w-20 md:h-20drop-shadow-xl ml-6">
                             <SealQuestion size={44} color="#444341" />
                         </div>
                         <div className="flex flex-col gap-2 font-semibold text-customerSecondary p-2 text-sm md:p-4 md:text-lg">
