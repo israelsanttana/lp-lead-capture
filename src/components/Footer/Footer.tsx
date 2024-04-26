@@ -3,9 +3,9 @@ import { VerificationMecFaculdadeUnica, VerificationMecFatesp } from "../Verific
 
 export function Footer() {
     return (
-        <div className="w-full  bg-customerSecondary text-white">
+        <div className="w-full  bg-black border-t text-white">
             <div className="container mx-auto">
-                <div className="h-72 w-full grid grid-cols-1 justify-items-center pt-10 pb-10 text-center lg:grid-cols-3">
+                <div className=" w-full grid grid-cols-1 justify-items-center pt-10 pb-10 text-center lg:grid-cols-3">
                     <div className="flex self-center gap-3">
                         <VerificationMecFaculdadeUnica />
                         <VerificationMecFatesp />

@@ -23,7 +23,7 @@ export function Hero() {
                             <img src={logoConectaEdu} width={190} />
                         </div>
                         <div className="flex items-center justify-center md:text-center">
-                            <h1 className="text-2xl md:text-2xl lg:3xl font-bold">
+                            <h1 className="text-2xl md:text-3xl lg:4xl font-bold">
                                 DISCIPLINAS <span className=" text-customerPrimary">ISOLADAS</span>
                             </h1>
                         </div>
@@ -39,7 +39,7 @@ export function Hero() {
                     transition={{ duration: 1.5, delay: 0.6 }}
                     className="text-center">
 
-                    <h1 className="text-2xl md:text-5xl text-white font-bold leading-14 shadow-text">
+                    <h1 className="text-2xl md:text-xl lg:text-5xl text-white font-bold leading-14 shadow-text">
                         SUA TURMA NÃO IRÁ SE
                         <br />
                         FORMAR SEM VOCÊ!
@@ -89,7 +89,7 @@ export function Hero() {
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 1.8, delay: 0.12 }}
-                        className="bg-customerSecondary/70 rounded-xl p-4 grid grid-cols-[1fr_2fr] items-center justify-center">
+                        className="bg-customerSecondary/70 rounded-xl p-4 grid grid-cols-[1fr_2fr] items-center justify-center md:grid-cols-[1fr_1fr]">
                         <div className="flex flex-col items-center text-center gap-1 md:gap-6">
                             <div className="flex items-center justify-center bg-customerPrimary -mt-10 rounded-full
                              w-16 h-16 md:w-20 md:h-20 drop-shadow-xl">
@@ -121,7 +121,7 @@ export function Hero() {
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 2.0, delay: 0.8 }}
-                        className="bg-customerSecondary/70 p-4 rounded-xl grid grid-cols-[1fr_2fr] items-center justify-center">
+                        className="bg-customerSecondary/70 p-4 rounded-xl grid grid-cols-[1fr_2fr] items-center justify-center min-h-[150px] md:min-h-0">
                         <div className="flex flex-col items-center gap-1 md:gap-6">
                             <div
                                 className="flex items-center justify-center bg-customerPrimary -mt-10 rounded-full w-16 h-16 md:w-20 md:h-20
@@ -136,7 +136,7 @@ export function Hero() {
                         </div>
                         <div className="text-xs md:text-[13px] lg:text-[13px] pl-3 flex flex-col gap-1 md:gap-3">
                             <p className="flex gap-1">
-                                <CheckCircle size={26} color="#FDD105" />
+                                <CheckCircle size={20} color="#FDD105" />
                                 Totalmente EAD - Incluindo Avaliações
                             </p>
                             <p className="flex gap-1">
