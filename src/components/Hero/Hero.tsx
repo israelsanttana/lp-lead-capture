@@ -23,6 +23,27 @@ export function Hero() {
             </div>
           </div>
         </div>
+    return (
+        <div className='bg-hero-bg bg-cover w-full'>
+
+            <div className="container mx-auto  flex flex-col justify-between items-center gap-20 md:h-[100vh] lg:h-[100vh]">
+
+                <div className="w-full bg-customerSecondary/70 mb-6 py-2 px-3 shadow-lg shadow-black-900/50 rounded-lg mt-4">
+
+                    <div className=" text-slate-100 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3">
+                        <div className="flex justify-center items-center md:justify-start lg:justify-start">
+                            <img src={logoConectaEdu} width={190} />
+                        </div>
+                        <div className="flex items-center justify-center">
+                            <h1 className="text-2xl md:text-3xl lg:3xl font-bold">
+                                DISCIPLINAS <span className=" text-customerPrimary">ISOLADAS</span>
+                            </h1>
+                        </div>
+                        <div className="hidden md:flex lg:flex items-center justify-end text-center gap-2">
+                            <img src={logoMac} width={100} />
+                        </div>
+                    </div>
+                </div>
 
         <div className="text-center">
           <h1 className="text-5xl text-white font-bold leading-14 shadow-text">
@@ -30,40 +51,7 @@ export function Hero() {
             <br />
             FORMAR SEM VOCÊ!
           </h1>
-          <h2 className="text-2xl text-white  mt-4">
-            Acabe com suas dependências em{" "}
-            <span className="relative">
-              até 7 dias{" "}
-              <svg
-                className="absolute -top-1 -left-1 w-[110%] h-[150%]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 500 150"
-                preserveAspectRatio="none"
-                style={{
-                  stroke: "#fdd105",
-                  strokeWidth: 10,
-                  fill: "none",
-                }}
-              >
-                <path
-                  d="M5,125.4c30.5-3.8,137.9-7.6,177.3-7.6c117.2,0,252.2,4.7,312.7,7.6"
-                  style={{
-                    strokeDasharray: 1500,
-                    strokeDashoffset: 1500,
-                    animation: "draw 2.5s ease infinite",
-                  }}
-                ></path>
-                <path
-                  d="M26.9,143.8c55.1-6.1,126-6.3,162.2-6.1c46.5,0.2,203.9,3.2,268.9,6.4"
-                  style={{
-                    strokeDasharray: 1500,
-                    strokeDashoffset: 1500,
-                    animation: "draw 2.5s ease infinite",
-                  }}
-                ></path>
-              </svg>
-            </span>
-          </h2>
+          <h2 className="text-2xl text-white  mt-4">Acabe com suas dependências em até 7 dias</h2>
           <button className="bg-customerPrimary text-customerSecondary px-10 py-2 rounded-md mt-4 font-bold drop-shadow-xl">
             FALE CONOSCO
           </button>
