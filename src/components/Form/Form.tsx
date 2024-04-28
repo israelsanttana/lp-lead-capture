@@ -10,23 +10,45 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { CheckCircle } from "@phosphor-icons/react";
+import { useState } from "react";
 import { useForm } from 'react-hook-form';
-
 interface FormData {
     nome: string;
     email: string;
-    phone: number;
+    telefone: string;
 }
 
-export function Form() {
-    const { register, handleSubmit, formState: { errors } } = useForm<FormData>();
-    const onSubmit = (data: FormData) => {
+export function Form({ modalController }: { modalController: (value: boolean) => void }) {
+    const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+    const [isLoading, setIsLoading] = useState(false); const onSubmit = (data: FormData) => {
+
+        setIsLoading(true);
+        setTimeout(() => {
+            window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
+            setIsLoading(false); // Esconde a tela de loading
+            reset();
+            modalController(false);
+        }, 2000); // Ajuste o tempo de atraso conforme necessário
         console.log(data);
+
     };
+
+    function LoadingScreen() {
+        return (
+            <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
+                <div>
+                    <p className="text-2xl font-bold">Cadastro realizado com sucesso <CheckCircle size={32} /></p>
+                </div>
+                <div className="animate-spin h-10 w-10 border-t-2 border-b-2 border-purple-500 rounded-full"></div>
+            </div>
+        );
+    }
 
     return (
         <div>
             <Card className="w-full flex-1">
+                {isLoading && <LoadingScreen />}
                 <CardHeader>
                     <CardTitle>Faça sua inscrição</CardTitle>
                     <CardDescription>
@@ -43,7 +65,9 @@ export function Form() {
                                     type="text"
                                     {...register('nome', { required: 'Nome é obrigatório' })}
                                 />
-                                {errors.nome && <p>{errors.nome.message}</p>}
+                                <div className="text-red-500 text-xs">
+                                    {errors.nome && <p>{errors.nome.message}!</p>}
+                                </div>
                             </div>
                             <div className="flex flex-col space-y-1.5">
                                 <Label htmlFor="email">E-mail:</Label>
@@ -58,22 +82,27 @@ export function Form() {
                                         },
                                     })}
                                 />
-                                {errors.email && <p>{errors.email.message}</p>}
+                                <div className="text-red-500 text-xs">
+                                    {errors.email && <p>{errors.email.message}!</p>}
+                                </div>
+
                             </div>
                             <div className="flex flex-col space-y-1.5">
                                 <Label htmlFor="phone">Celular:</Label>
                                 <Input
                                     id="celular"
-                                    type="number"
-                                    {...register('phone', {
-                                        required: 'E-mail é obrigatório',
+                                    type="text"
+                                    {...register('telefone', {
+                                        required: 'Celular é obrigatório',
                                         pattern: {
-                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                            value: /^\(?\d{2}\)?[-. ]?\d{5}[-. ]?\d{4}$/,
                                             message: 'Celular inválido',
                                         },
                                     })}
                                 />
-                                {errors.email && <p>{errors.email.message}</p>}
+                                <div className="text-red-500 text-xs">
+                                    {errors.telefone && <p>{errors.telefone.message}!</p>}
+                                </div>
                             </div>
                         </div>
                         <CardFooter className="mt-6 p-0">
