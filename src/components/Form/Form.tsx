@@ -21,16 +21,34 @@ interface FormData {
 
 export function Form({ modalController }: { modalController: (value: boolean) => void }) {
     const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
-    const [isLoading, setIsLoading] = useState(false); const onSubmit = (data: FormData) => {
-
+    const [isLoading, setIsLoading] = useState(false);
+    const onSubmit = async (data: FormData) => {
         setIsLoading(true);
-        setTimeout(() => {
-            window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
-            setIsLoading(false); // Esconde a tela de loading
-            reset();
-            modalController(false);
-        }, 2000); // Ajuste o tempo de atraso conforme necessário
-        console.log(data);
+
+        try {
+            const response = await fetch('https://conectaedu.com.br/lead/disciplinas-isoladas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+
+            });
+            if (!response.ok) {
+                throw new Error('Erro ao enviar o formulário');
+            }
+
+            setTimeout(() => {
+                window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
+                setIsLoading(false); // Esconde a tela de loading
+                reset();
+                modalController(false);
+            }, 2000); // Ajuste o tempo de atraso conforme necessário
+
+        } catch (error) {
+            console.error(error);
+            setIsLoading(false);
+        }
 
     };
 
