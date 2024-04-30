@@ -20,10 +20,11 @@ interface FormData {
 }
 
 export function Form({ modalController }: { modalController: (value: boolean) => void }) {
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
+    const { register, handleSubmit, reset, setValue, formState: { errors } } = useForm<FormData>();
     const [isLoading, setIsLoading] = useState(false);
     const onSubmit = async (data: FormData) => {
         setIsLoading(true);
+
 
         try {
             const response = await fetch('https://conectaedu.com.br/lead/disciplinas-isoladas', {
@@ -34,31 +35,56 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                 body: JSON.stringify(data)
 
             });
-            if (!response.ok) {
-                throw new Error('Erro ao enviar o formulário');
+            if (response.ok) {
+                setTimeout(() => {
+                    setIsLoading(false); // Esconde a tela de loading
+                    window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
+                    reset();
+                    modalController(false);
+                }, 1000); // Ajuste o tempo de atraso conforme necessário
             }
 
-            setTimeout(() => {
-                window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
-                setIsLoading(false); // Esconde a tela de loading
-                reset();
-                modalController(false);
-            }, 2000); // Ajuste o tempo de atraso conforme necessário
-
         } catch (error) {
-            console.error(error);
+            console.log(error);
             setIsLoading(false);
         }
 
     };
 
+    const formatPhoneNumber = (value: string) => {
+        // Remove caracteres não numéricos
+        value = value.replace(/\D/g, '');
+
+        // Formata o número de telefone
+        let formattedValue = '';
+        if (value.length > 0) {
+            formattedValue = `(${value.substring(0, 2)}`;
+            if (value.length > 2) {
+                formattedValue += `) ${value.substring(2, 7)}`;
+            }
+            if (value.length > 7) {
+                formattedValue += `-${value.substring(7)}`;
+            }
+        }
+
+        return formattedValue;
+    };
+
+    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const formattedValue = formatPhoneNumber(e.target.value);
+        setValue('telefone', formattedValue);
+    };
+
     function LoadingScreen() {
         return (
-            <div className="fixed inset-0 flex items-center justify-center z-50 bg-white">
-                <div>
-                    <p className="text-2xl font-bold">Cadastro realizado com sucesso <CheckCircle size={32} /></p>
+            <div className="fixed inset-0 flex flex-col items-center justify-center gap-4 z-50 bg-white rounded-lg">
+                <div className="flex flex-row items-center gap-1">
+                    <p className="text-md">Cadastro realizado com sucesso</p><CheckCircle size={26} color="green" />
                 </div>
                 <div className="animate-spin h-10 w-10 border-t-2 border-b-2 border-purple-500 rounded-full"></div>
+                <div className="text-center">
+                    <p className="text-md">Aguarde... </p>
+                </div>
             </div>
         );
     }
@@ -116,7 +142,9 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                                             value: /^\(?\d{2}\)?[-. ]?\d{5}[-. ]?\d{4}$/,
                                             message: 'Celular inválido',
                                         },
+
                                     })}
+                                    onChange={handlePhoneChange}
                                 />
                                 <div className="text-red-500 text-xs">
                                     {errors.telefone && <p>{errors.telefone.message}!</p>}

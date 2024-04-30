@@ -78,9 +78,9 @@ export function Hero() {
                             </svg>
                         </span>
                     </h2>
-                    <button className="bg-customerPrimary text-customerSecondary px-10 py-2 rounded-md mt-8 md:mt-4 font-bold drop-shadow-xl">
+                    <div>
                         <ModalForm title="FALE CONOSCO" />
-                    </button>
+                    </div>
                 </motion.div>
 
                 <div className="grid grid-cols-1 gap-6 text-white mb-4 md:gap-2 md:grid-cols-3 lg:grid-cols-3">
