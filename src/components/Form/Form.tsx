@@ -25,7 +25,6 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
     const onSubmit = async (data: FormData) => {
         setIsLoading(true);
 
-
         try {
             const response = await fetch('https://conectaedu.com.br/lead/disciplinas-isoladas', {
                 method: 'POST',
@@ -34,15 +33,16 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                 },
                 body: JSON.stringify(data)
 
+
             });
+            console.log(response)
             if (response.ok) {
-                setTimeout(() => {
-                    setIsLoading(false); // Esconde a tela de loading
-                    window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
-                    reset();
-                    modalController(false);
-                }, 1000); // Ajuste o tempo de atraso conforme necessário
+                setIsLoading(false); // Esconde a tela de loading
+                window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
+                reset();
+                modalController(false);
             }
+
 
         } catch (error) {
             console.log(error);
@@ -50,6 +50,8 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
         }
 
     };
+
+
 
     const formatPhoneNumber = (value: string) => {
         // Remove caracteres não numéricos
