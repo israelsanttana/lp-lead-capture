@@ -10,7 +10,7 @@ export const VideoPlayer = () => {
         <Dialog>
             <DialogTrigger><img src={capaVideo} width={700} alt="Capa do Vídeo" /></DialogTrigger>
             <DialogContent className="bg-transparent text-white border-none shadow-none">
-                <video className="w-full h-full p-3" src="https://conectaedu.com.br/video-sergio.mp4" controls autoPlay preload="auto" title="VideoPlayer"></video>
+                <video className="w-full h-full p-3" src="https://youtube.com/embed/6YslpVvRHgk?si=Hec3h4IT_DnbqLZs" controls autoPlay preload="auto" title="VideoPlayer"></video>
             </DialogContent>
         </Dialog>
 
