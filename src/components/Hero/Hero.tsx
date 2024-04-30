@@ -22,7 +22,7 @@ export function Hero() {
                         <div className="flex justify-center items-center md:justify-start lg:justify-start">
                             <img src={logoConectaEdu} width={190} />
                         </div>
-                        <div className="flex items-center justify-center md:text-center">
+                        <div className="flex items-center text-center justify-center md:text-center">
                             <h1 className="text-2xl md:text-3xl lg:4xl font-bold">
                                 DISCIPLINAS <span className=" text-customerPrimary">ISOLADAS</span>
                             </h1>

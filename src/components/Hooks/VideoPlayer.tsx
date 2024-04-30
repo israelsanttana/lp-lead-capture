@@ -9,8 +9,8 @@ export const VideoPlayer = () => {
     return (
         <Dialog>
             <DialogTrigger><img src={capaVideo} width={700} alt="Capa do Vídeo" /></DialogTrigger>
-            <DialogContent className="bg-transparent text-white border-none shadow-none">
-                <video className="w-full h-full p-3" src="https://youtube.com/embed/6YslpVvRHgk?si=Hec3h4IT_DnbqLZs" controls autoPlay preload="auto" title="VideoPlayer"></video>
+            <DialogContent className="bg-transparent text-white border-none shadow-none flex justify-center items-center">
+                <iframe className="w-[350px] h-[600px] p-3 md:w-[450px] md:h-[800px]" src="https://www.youtube.com/embed/6YslpVvRHgk?autoplay=1" title="Elimine Matérias Pendentes em 7 Dias - 100% EaD!" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </DialogContent>
         </Dialog>
 
