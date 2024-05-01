@@ -105,7 +105,7 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="grid w-full items-center gap-4">
                             <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="nome">Nome:</Label>
+                                <Label htmlFor="nome">Nome <span className="text-red-500">*</span></Label>
                                 <Input
                                     id="nome"
                                     type="text"
@@ -113,6 +113,25 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                                 />
                                 <div className="text-red-500 text-xs">
                                     {errors.nome && <p>{errors.nome.message}!</p>}
+                                </div>
+                            </div>
+                            <div className="flex flex-col space-y-1.5">
+                                <Label htmlFor="phone">Celular <span className="text-red-500">*</span></Label>
+                                <Input
+                                    id="celular"
+                                    type="text"
+                                    {...register('telefone', {
+                                        required: 'Celular é obrigatório',
+                                        pattern: {
+                                            value: /^\(?\d{2}\)?[-. ]?\d{5}[-. ]?\d{4}$/,
+                                            message: 'Celular inválido',
+                                        },
+
+                                    })}
+                                    onChange={handlePhoneChange}
+                                />
+                                <div className="text-red-500 text-xs">
+                                    {errors.telefone && <p>{errors.telefone.message}!</p>}
                                 </div>
                             </div>
                             <div className="flex flex-col space-y-1.5">
@@ -131,25 +150,6 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                                     {errors.email && <p>{errors.email.message}!</p>}
                                 </div>
 
-                            </div>
-                            <div className="flex flex-col space-y-1.5">
-                                <Label htmlFor="phone">Celular:</Label>
-                                <Input
-                                    id="celular"
-                                    type="text"
-                                    {...register('telefone', {
-                                        required: 'Celular é obrigatório',
-                                        pattern: {
-                                            value: /^\(?\d{2}\)?[-. ]?\d{5}[-. ]?\d{4}$/,
-                                            message: 'Celular inválido',
-                                        },
-
-                                    })}
-                                    onChange={handlePhoneChange}
-                                />
-                                <div className="text-red-500 text-xs">
-                                    {errors.telefone && <p>{errors.telefone.message}!</p>}
-                                </div>
                             </div>
                         </div>
                         <CardFooter className="mt-6 p-0">
