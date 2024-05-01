@@ -121,7 +121,6 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
                                     id="email"
                                     type="email"
                                     {...register('email', {
-                                        required: 'E-mail é obrigatório',
                                         pattern: {
                                             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                                             message: 'E-mail inválido',
