@@ -28,6 +28,7 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
         try {
             const response = await fetch('https://conectaedu.com.br/lead/disciplinas-isoladas', {
                 method: 'POST',
+                mode: "no-cors",
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -35,7 +36,6 @@ export function Form({ modalController }: { modalController: (value: boolean) =>
 
 
             });
-            console.log(response)
             if (response.ok) {
                 setIsLoading(false); // Esconde a tela de loading
                 window.open('https://api.whatsapp.com/send?phone=5538988415006&text=Ol%C3%A1+quero+saber+mais+sobre+as+disciplinas+isoladas', '_blank'); // Abre uma nova janela
